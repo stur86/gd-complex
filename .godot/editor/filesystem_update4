@@ -1,2 +1,3 @@
 res://TestScene.tscn
 res://addons/complex/complex.gd
+res://addons/complex/plugin.cfg
