@@ -37,6 +37,7 @@ func pow(x) -> Complex:
 	var mo = mod()
 	var ph = phase()
 	
+	mo = pow(mo, x)
 	if x is Complex:
 		mo = mo*exp(-ph*x.imag)
 		ph = ph*x.real
