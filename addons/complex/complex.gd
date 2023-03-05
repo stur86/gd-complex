@@ -36,15 +36,11 @@ func div(x) -> Complex:
 func pow(x) -> Complex:
 	var mo = mod()
 	var ph = phase()
+
+	var ans_ph = Complex.new(log(mo), ph)
+	ans_ph = ans_ph.mul(x)
 	
-	mo = pow(mo, x)
-	if x is Complex:
-		mo = mo*exp(-ph*x.imag)
-		ph = ph*x.real
-	else:
-		ph = ph*x
-		
-	return Complex.new(mo*cos(ph), mo*sin(ph))
+	return ans_ph.exp()
 
 func conj() -> Complex:
 	return Complex.new(real, -imag)
