@@ -6,19 +6,16 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
 config/name="GodotComplex"
-
-[autoload]
-
-Complex="*res://addons/complex/singleton.gd"
+config/features=PackedStringArray("4.0")
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/complex/plugin.cfg" )
+enabled=PackedStringArray("res://addons/complex/plugin.cfg")
 
 [physics]
 
